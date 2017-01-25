@@ -30,17 +30,17 @@ public class CuentaCorriente {
 	private int saldo;
 	// Inicializamos el constructor
 	public  CuentaCorriente(){
-		this.nombre = nombre;
+		this.nombre = "";
 		
-		this.apellidos = apellidos;
+		this.apellidos = ""; // Manejo de Errores
 		
-		this.direccion = direccion;
+		this.direccion = "";
 		
-		this.telefono = telefono ;
+		this.telefono = "" ;
 		
-		this.dni = dni;
+		this.dni = "";
 		
-		this.saldo = saldo;
+		this.saldo = 0;
 		
 	}
 	//metodos Getters y Setters
