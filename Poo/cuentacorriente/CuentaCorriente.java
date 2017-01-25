@@ -30,82 +30,83 @@ public class CuentaCorriente {
 	private int saldo;
 	// Inicializamos el constructor
 	public  CuentaCorriente(){
-		nombre = nombre;
+		this.nombre = nombre;
 		
-		apellidos = apellidos;
+		this.apellidos = apellidos;
 		
-		direccion = direccion;
+		this.direccion = direccion;
 		
-		telefono = telefono ;
+		this.telefono = telefono ;
 		
-		dni = dni;
+		this.dni = dni;
 		
-		saldo = saldo;
+		this.saldo = saldo;
 		
 	}
 	//metodos Getters y Setters
 	public String getNombre(){
-		return "Nombre: " + nombre;
+		return "Nombre: " + this.nombre;
 	}
 	
 	public void  setNombre(String introducirNombre){
-		nombre = introducirNombre;
+		this.nombre = introducirNombre;
 	}
 	
 	
 	public String getApellidos(){
-		return "Apellidos: " + apellidos;
+		return "Apellidos: " + this.apellidos;
 	}
 	
 	public void setApellidos(String introducirApellidos){
-		apellidos = introducirApellidos;
+		this.apellidos = introducirApellidos;
 	}
 	
 	
 	public  String getDireccion(){
-		return "Dirección: " + direccion;
+		return "Dirección: " + this.direccion;
 	}
 	
 	public void setDireccion(String introducirDireccion){
-		direccion = introducirDireccion;
+		this.direccion = introducirDireccion;
 	}
 	
 	public  String getTelefono(){
-		return "Telefono: " + telefono;
+		return "Telefono: " + this.telefono;
 	}
 	
 	public void setTelefono(String introducirTelefono){
-		telefono = introducirTelefono;
+		this.telefono = introducirTelefono;
 	}
 	
 	public  String getDni(){
-		return "DNI: " + dni;
+		return "DNI: " + this.dni;
 	}
 	
 	public void setDni(String introducirDni){
-		dni = introducirDni;
+		this.dni = introducirDni;
 	}
 	
 	public  String getSaldo(){
-		return "Saldo: " + saldo;
+		return "Saldo: " + this.saldo;
 	}
 	
 	public void setSaldo(int introducirSaldo){
-		saldo = introducirSaldo;
+		this.saldo = introducirSaldo;
 	}
 	//retirarDinero(): resta al saldo una cantidad de dinero pasada como argumento.
 	public void retirarDinero(int adeudo){
-		saldo = saldo - adeudo;
+		this.saldo = this.saldo - adeudo;
 	}
 	
 	// ingresarDinero(): añade al saldo una cantidad de dinero.
 	public void ingresarDinero(int ingreso){
-		saldo = saldo + ingreso;
+		this.saldo = this.saldo + ingreso;
 	}
 	
 	//consultarCuenta(): visualizará los datos de la cuenta.
 	public String consultarCuenta(){
-		return "Nombre: " + nombre + "\n" + "Apellidos: " + apellidos + "\n" + "Dirección: " + direccion +
-				"\n" + "Teléfono: " + telefono + "\n" + "DNI: " + dni + "\n" + "Saldo: " + saldo;
+		return "Nombre: " + this.nombre + "\n" + "Apellidos: " + this.apellidos + "\n" + "Dirección: " 
+				+ this.direccion +"\n" + "Teléfono: " + this.telefono + "\n" + "DNI: " + this.dni 
+				+ "\n" + "Saldo: " + this.saldo;
 	}
 }
