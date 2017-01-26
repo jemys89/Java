@@ -26,21 +26,22 @@ package org.foobarspam.cuentacorriente;
 
 public class CuentaCorriente {
 		
-	private String nombre, apellidos, direccion, telefono, dni;
-	private int saldo;
+	private String nombre, apellidos, direccion, telefono, dni = "";
+	private int saldo = 0;
 	// Inicializamos el constructor
-	public  CuentaCorriente(){
-		this.nombre = "";
+	public  CuentaCorriente(String nombre, String apellidos, String direccion, String telefono,
+			String dni, int saldo){
+		this.nombre = nombre;
 		
-		this.apellidos = ""; // Manejo de Errores
+		this.apellidos = apellidos; 
 		
-		this.direccion = "";
+		this.direccion = direccion;
 		
-		this.telefono = "" ;
+		this.telefono = telefono;
 		
-		this.dni = "";
+		this.dni = dni;
 		
-		this.saldo = 0;
+		this.saldo = saldo;
 		
 	}
 	//metodos Getters y Setters
