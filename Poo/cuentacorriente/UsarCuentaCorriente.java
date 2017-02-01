@@ -11,6 +11,12 @@ public class UsarCuentaCorriente {
 		Pepita.retirarDinero(20);
 		Pepita.ingresarDinero(200);
 		System.out.println(Pepita.consultarCuenta());
+		if (Pepita.saldoNegativo()) {
+			System.out.println("No queda dinero en esta cuenta");
+		} else {
+			System.out.println("Hay dinero en la cuenta");
+		}
+
 	}
 
 }

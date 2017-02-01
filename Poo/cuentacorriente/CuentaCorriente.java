@@ -28,7 +28,12 @@ public class CuentaCorriente {
 		
 	private String nombre, apellidos, direccion, telefono, dni = "";
 	private int saldo = 0;
+	
 	// Inicializamos el constructor
+	public CuentaCorriente(){
+		
+	}
+	
 	public  CuentaCorriente(String nombre, String apellidos, String direccion, String telefono,
 			String dni, int saldo){
 		this.nombre = nombre;
@@ -46,7 +51,7 @@ public class CuentaCorriente {
 	}
 	//metodos Getters y Setters
 	public String getNombre(){
-		return "Nombre: " + this.nombre;
+		return  this.nombre;
 	}
 	
 	public void  setNombre(String introducirNombre){
@@ -55,7 +60,7 @@ public class CuentaCorriente {
 	
 	
 	public String getApellidos(){
-		return "Apellidos: " + this.apellidos;
+		return   this.apellidos;
 	}
 	
 	public void setApellidos(String introducirApellidos){
@@ -64,7 +69,7 @@ public class CuentaCorriente {
 	
 	
 	public  String getDireccion(){
-		return "Dirección: " + this.direccion;
+		return this.direccion;
 	}
 	
 	public void setDireccion(String introducirDireccion){
@@ -72,7 +77,7 @@ public class CuentaCorriente {
 	}
 	
 	public  String getTelefono(){
-		return "Telefono: " + this.telefono;
+		return this.telefono;
 	}
 	
 	public void setTelefono(String introducirTelefono){
@@ -80,15 +85,15 @@ public class CuentaCorriente {
 	}
 	
 	public  String getDni(){
-		return "DNI: " + this.dni;
+		return this.dni;
 	}
 	
 	public void setDni(String introducirDni){
 		this.dni = introducirDni;
 	}
 	
-	public  String getSaldo(){
-		return "Saldo: " + this.saldo;
+	public  double getSaldo(){
+		return this.saldo;
 	}
 	
 	public void setSaldo(int introducirSaldo){
@@ -106,8 +111,17 @@ public class CuentaCorriente {
 	
 	//consultarCuenta(): visualizará los datos de la cuenta.
 	public String consultarCuenta(){
-		return "Nombre: " + this.nombre + "\n" + "Apellidos: " + this.apellidos + "\n" + "Dirección: " 
-				+ this.direccion +"\n" + "Teléfono: " + this.telefono + "\n" + "DNI: " + this.dni 
-				+ "\n" + "Saldo: " + this.saldo;
+		return "Nombre: " + getNombre()+ "\n" + "Apellidos: " + getApellidos()+ "\n" + "Dirección: " 
+				+ getDireccion() +"\n" + "Teléfono: " + getTelefono()+ "\n" + "DNI: " + getDni()
+				+ "\n" + "Saldo: " + getSaldo();
 	}
+	//saldoNegativo(): devolverá  un valor booleano si el salgo es negativo.
+	public boolean saldoNegativo() {
+		if (getSaldo() < 0) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}	
 }
