@@ -58,5 +58,13 @@ public class NumerosComprendidosTest {
 		testNumeros.mediaImpares();
 		assertEquals(testNumeros.getAuxiliar()[2], 25);
 	}
+	@Test
+	public void test_auxiliar_pos3() {
+		final int[] llist = {25,25,25,25,25,25,25,25,25,25,25,25,25,25,25,26,26,26,26,26,26,26,26,26,26};
+		testNumeros.setLista(llist);
+		testNumeros.sumaNumerosComprendidos();
+		
+		assertEquals(testNumeros.getAuxiliar()[3], 325);
+	}
 
 }

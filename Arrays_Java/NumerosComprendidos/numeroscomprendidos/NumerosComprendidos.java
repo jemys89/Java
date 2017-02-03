@@ -13,6 +13,8 @@ Escribe a continuación el contenido de lista, así como los resultados obtenidos 
 package org.foobarspam.numeroscomprendidos;
 
 
+import java.util.Arrays;
+
 public class NumerosComprendidos {
 		
 	private int [] lista = new int [25];
@@ -30,15 +32,13 @@ public class NumerosComprendidos {
 	public int [] getLista(){
 		return this.lista;
 	}
-	public void setAuxiliar(int... auxiliar){
-		this.auxiliar = auxiliar;
-	}
+	
 	public int [] getAuxiliar(){
 		return this.auxiliar;
 	}
 	
 	
-	//Métodos
+	//Lógica
 	public int [] generarNumeros(){
 		
 		for(int i = 0; i < 25; i++){
@@ -71,6 +71,14 @@ public class NumerosComprendidos {
 			}
 		}return auxiliar[2] = sumaImpares / getImpares();
 		
+	}
+	public int sumaNumerosComprendidos(){
+		Arrays.sort(getLista());
+		int sumaNumeros = 0;
+		for(int i = 0; i<=getLista()[0];i++){
+			sumaNumeros += i;
+			
+		}return auxiliar[3] = sumaNumeros;
 	}
 	
 	
