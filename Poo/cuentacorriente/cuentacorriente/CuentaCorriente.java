@@ -26,7 +26,7 @@ package org.foobarspam.cuentacorriente;
 
 public class CuentaCorriente {
 		
-	private String nombre, apellidos, direccion, telefono, dni = "";
+	private String nombre, apellidos, direccion, telefono, dni = null;
 	private int saldo = 0;
 	
 	// Inicializamos el constructor
@@ -92,7 +92,7 @@ public class CuentaCorriente {
 		this.dni = introducirDni;
 	}
 	
-	public  double getSaldo(){
+	public  int getSaldo(){
 		return this.saldo;
 	}
 	
