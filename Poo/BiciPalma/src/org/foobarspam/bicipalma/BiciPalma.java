@@ -1,8 +1,6 @@
 package org.foobarspam.bicipalma;
 
-import bicicleta.Bicicleta;
-import estacion.Estacion;
-import tarjetaUsuario.TarjetaUsuario;
+import org.foobarspam.bicipalma.*;
 
 public class BiciPalma {
 

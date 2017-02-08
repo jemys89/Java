@@ -7,7 +7,7 @@ public class Estacion {
 	private int idEstacion = 0;
 	private String direccion = null;
 	private int numeroAnclajes = 0;
-	private Bicicleta [] anclajes = new Bicicleta[numeroAnclajes];
+	private Bicicleta [] anclajes = null;
 	
 	//Inicializo los constructores
 	public Estacion(){
@@ -69,8 +69,10 @@ public class Estacion {
 	
 	
 	//Métodos
-	public String consultarEstacion(){
-		return String.valueOf(getIdEstacion()) + ":" + getDireccion()+ ":" + String.valueOf(getNumeroAnclajes());
+	public void consultarEstacion(){
+		System.out.println("id: " + getIdEstacion());
+		System.out.println("direccion: " + getDireccion());
+		System.out.println("numeroAnclajes: " + getNumeroAnclajes());
 	}
 	
 	
@@ -97,12 +99,10 @@ public class Estacion {
 	public void anclarBicicleta(Bicicleta bicicleta){
 		for(int anclaje = 0; anclaje < getAnclajes().length; anclaje ++){
 			if(getAnclajes()[anclaje] == null){
-				setAnclajes(bicicleta, anclaje);
+				getAnclajes()[anclaje] = bicicleta;
 				
 				mostrarAnclaje(bicicleta.getIdBicicleta(),anclaje);
 				break;
-			}else{
-				System.out.println("Los anclajes están llenos");
 			}
 	}
 	}
@@ -120,22 +120,28 @@ public class Estacion {
 	}
 	
 	
-	public void retirarBicicleta(Bicicleta bicicleta, TarjetaUsuario activada){
-		if(activada.getActivada() == true){
-			for(int anclaje = 0; anclaje < getAnclajes().length; anclaje ++){
-				if(getAnclajes()[anclaje] != null){
-					mostrarBicicleta(bicicleta, anclaje );
-					getAnclajes()[anclaje] = null;
+	public void retirarBicicleta(TarjetaUsuario activada){
+		if(activada.getActivada() ){
+			boolean biciRetirada = false;
+			
+			while (!biciRetirada){	
+			
+				int anclajeAleatorio = generarAnclaje();
+				int numeroAnclaje = anclajeAleatorio + 1;
+			if(getAnclajes()[anclajeAleatorio] != null){
+					mostrarBicicleta(getAnclajes()[anclajeAleatorio].getIdBicicleta(), anclajeAleatorio );
 					
-					break;
+					getAnclajes()[anclajeAleatorio] = null;
+					biciRetirada = true;
+					
 				}else{
 					System.out.println("No hay bicicletas");
 				}
 			}
-		}
-	}
+	}}
 	
-	public void mostrarBicicleta(Bicicleta bicicleta, int numeroAnclaje){
+
+	public void mostrarBicicleta(int bicicleta, int numeroAnclaje){
 		if(getAnclajes()[numeroAnclaje] != null){
 			System.out.println("La bicicleta con ID: " + getAnclajes()[numeroAnclaje].getIdBicicleta() + 
 				 " estaba en la posición " + (numeroAnclaje + 1));
@@ -145,7 +151,7 @@ public class Estacion {
 	}
 	
 	public int generarAnclaje(){
-		 int anclajeAleatorio = ThreadLocalRandom.current().nextInt(0, numeroAnclajes +0);
+		 int anclajeAleatorio = ThreadLocalRandom.current().nextInt(numeroAnclajes -1);
 		 return anclajeAleatorio;
 	}
 }

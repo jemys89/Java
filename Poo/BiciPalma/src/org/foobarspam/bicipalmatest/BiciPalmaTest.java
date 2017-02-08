@@ -19,7 +19,7 @@ public class BiciPalmaTest {
 	}
 	@Test
 	public void test__estacion() {
-		
+		System.out.println("ESTACION");
 		Estacion terminal = new Estacion(123,"Manacor", 12);
 		
 		assertEquals(123,terminal.getIdEstacion());
@@ -27,16 +27,7 @@ public class BiciPalmaTest {
 		assertEquals(12,terminal.getNumeroAnclajes());
 		
 	}
-	@Test
-	public void test_consultar_estacion() {
-		
-		Estacion terminal = new Estacion(123,"Manacor", 12);
-		
-		assertEquals(("123:Manacor:12"),terminal.consultarEstacion());
-		
-		Estacion terminalDos = new Estacion(456,"Palma", 26);
-		assertEquals(("456:Palma:26"),terminalDos.consultarEstacion());
-	}
+	
 	@Test
 	public void test_anclajes_libres() {
 		
@@ -90,7 +81,7 @@ public class BiciPalmaTest {
 		
 		
 		Estacion libres = new Estacion(456,"Palma", 26);
-		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario(123456789, true);
+		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("123456789", true);
 		libres.leerTarjetaUsuario(tarjetaUsuario);
 		assertEquals(true,tarjetaUsuario.getActivada());
 	}
@@ -98,11 +89,11 @@ public class BiciPalmaTest {
 		
 		System.out.println("////////Test retirar bicicleta\\\\\\");
 		Estacion libres = new Estacion(456,"Palma", 26);
-		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario(123456789, true);
+		TarjetaUsuario tarjetaUsuario = new TarjetaUsuario("123456789", true);
 		Bicicleta bici = new Bicicleta(12);
 		libres.anclarBicicleta(bici);
 		libres.leerTarjetaUsuario(tarjetaUsuario);
-		libres.retirarBicicleta(bici, tarjetaUsuario);
+		libres.retirarBicicleta( tarjetaUsuario);
 		
 		
 		

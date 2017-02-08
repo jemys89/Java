@@ -3,7 +3,7 @@ package org.foobarspam.bicipalma;
 public class TarjetaUsuario {
 	
 	//Inicializo las propiedades
-	private int idTajetaUsuario = 0;
+	private String idTajetaUsuario = null;
 	private boolean activada = false;
 	
 	//Inicializo los constructores
@@ -11,17 +11,17 @@ public class TarjetaUsuario {
 		
 	}
 	
-	public TarjetaUsuario(int idTarjetaUsuario, boolean activada){
+	public TarjetaUsuario(String idTarjetaUsuario, boolean activada){
 		this.idTajetaUsuario = idTarjetaUsuario;
 		this.activada = activada;
 	}
 	
 	//setters y getters
-	public int getIdTajetaUsuario() {
+	public String getIdTajetaUsuario() {
 		return idTajetaUsuario;
 	}
 
-	public void setIdTajetaUsuario(int idTajetaUsuario) {
+	public void setIdTajetaUsuario(String idTajetaUsuario) {
 		this.idTajetaUsuario = idTajetaUsuario;
 	}
 
