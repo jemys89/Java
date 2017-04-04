@@ -22,8 +22,13 @@ public class Regulator {
 		case HEATING:
 			System.out.println("Subiendo la temperatura + 1 : " + temperature.getTemperature());
 			break;
-		case WAITING:
+		case WAITING
 			System.out.println("Bajando la temperatura - 1 :  " + temperature.getTemperature());
+			break;
+		default :
+			System.out.println("Algo ha pasado....");
+			break;	
+				
 		}
 	}
 
