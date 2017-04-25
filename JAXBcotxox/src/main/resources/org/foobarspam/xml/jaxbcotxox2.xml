@@ -1,0 +1,20 @@
+<emt:carrera xmlns:emt="https://api.mobipalma.mobi/docs/"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://api.mobipalma.mobi/docs/ cotxox.xsd ">
+	<conductor>
+		<nombre>Juan</nombre>
+		<modelo>Mercedes</modelo>
+		<matricula>6666GDJ</matricula>
+		<valoracionMedia>4</valoracionMedia>
+		<ocupado>false</ocupado>
+		<valoraciones>24</valoraciones>
+	</conductor>
+	<origen>Manacor</origen>
+	<destino>Dinamarca</destino>
+	<tarjetaCredito>111112345</tarjetaCredito>
+	<tiempoCarrera>20.0</tiempoCarrera>
+	<costeTotal>20.0</costeTotal>
+	<distancia>40.0</distancia>
+	<propina>1.0</propina>
+
+</emt:carrera>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emt:carrera xmlns:emt="https://api.mobipalma.mobi/docs/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://api.mobipalma.mobi/docs/ jaxbcotxox.xsd ">
+  <tarjetaCredito>tarjetaCredito</tarjetaCredito>
+  <destino>destino</destino>
+  <origen>origen</origen>
+  <distancia>0.0</distancia>
+  <conductor>
+    <nombre>nombre</nombre>
+    <matricula>matricula</matricula>
+    <modelo>modelo</modelo>
+    <mediaValoracion>0.0</mediaValoracion>
+    <ocupado>true</ocupado>
+  </conductor>
+  <costeTotal>0.0</costeTotal>
+  <propina>0.0</propina>
+</emt:carrera>
