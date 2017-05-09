@@ -18,7 +18,7 @@ public class RegulatorModule extends AbstractModule {
 		  protected void configure() {
 			  bind(Heater.class).to(GasHeater.class);
 				// para seleccionar el tipo de servicio mediante BindingAnnotation:
-				//bind(Heater.class).annotatedWith(Force.class).to(Jedi.class);
+				bind(Heater.class).annotatedWith(Force.class).to(Jedi.class);
 				bind(Thermometer.class).to(RemoteCommandSensor.class);
 				
 		  }

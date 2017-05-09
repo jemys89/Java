@@ -1,5 +1,6 @@
 package org.foobarspam.furnaceDIP.hardware;
 
+import org.foobarspam.furnaceDIP.injector.Force;
 import org.foobarspam.furnaceDIP.interfaces.Heater;
 import org.foobarspam.furnaceDIP.interfaces.Regulate;
 import org.foobarspam.furnaceDIP.interfaces.Thermometer;
@@ -15,11 +16,11 @@ public class Regulator implements Regulate {
 	private Heater h;
 	private Thermometer t;
 	private RoomTemperature temperature;
-	private double maxTemp = 0d;
-	private  double minTemp = 0d;
+	private double maxTemp = 15d;
+	private  double minTemp = 21d;
 	
 	@Inject
-	public Regulator(Heater h, Thermometer t){
+	public Regulator(@Force Heater h, Thermometer t){
 		this.h = h;
 		this.t= t;
 	}

@@ -20,12 +20,13 @@ public class App
 {
     public static void main( String[] args )
     {
-    	final double minTemp = 15.0;
-        final double maxTemp = 21.0;
+    	//final double minTemp = 15.0;
+        //final double maxTemp = 21.0;
         
         Injector injector = Guice.createInjector(new RegulatorModule()); 
         
         Regulator regulator = injector.getInstance(Regulator.class);
+        Jedi yoda = injector.getInstance(Jedi.class);
         
         
        
@@ -35,9 +36,8 @@ public class App
         System.out.println( "Arrancando..." );
         regulator.regulate();
         
-//        Jedi yoda = new Jedi();
-//        System.out.println( "\nArrancando a Yoda: " );
-//        regulator.regulate(thermometer, yoda, minTemp, maxTemp, temperature);
-//        yoda.speak();
+        System.out.println( "\nArrancando a Yoda: " );
+        regulator.regulate();
+        yoda.speak();
     }
 }

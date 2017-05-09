@@ -4,14 +4,31 @@ import org.foobarspam.furnaceDIP.hardware.GasHeater;
 import org.foobarspam.furnaceDIP.interfaces.Heater;
 import org.foobarspam.furnaceDIP.types.RoomTemperature;
 
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
+
+@Singleton
 public class Jedi implements Heater {
+	
+	private Heater h;
+	private RoomTemperature temperature;
+	
+	@Inject
+	public Jedi(Heater heater){
+		this.h = heater;
+	}
+	
+	@Inject
+	public void setTemperature(RoomTemperature t){
+		this.temperature = t;
+	}
 	
 	public void engage(RoomTemperature temperature){
 		 temperature.incrementTemperature(this.toucheLightSable());
 	}
 	public void disengage(RoomTemperature temperature){
-		Heater heater = new GasHeater();
-		this.forcePersuasion(heater, temperature);
+
+		this.forcePersuasion( temperature);
 	}
 	
 	private double toucheLightSable(){
@@ -19,9 +36,9 @@ public class Jedi implements Heater {
 		return lightSableTemperature;
 	}
 	
-	private void forcePersuasion(Heater heater, RoomTemperature temperature){
+	private void forcePersuasion( RoomTemperature temperature){
 		temperature.incrementTemperature(-1400);
-		heater.disengage(temperature);
+		h.disengage(temperature);
 	}
 	
 	public void speak(){
