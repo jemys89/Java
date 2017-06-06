@@ -136,7 +136,7 @@ public static void main(String[] args) {
 				// quitar la division Atlantic
 				// metodo quitar("Atlantic");	 se busca por el nombre de la división, no por el objeto.		
 		
-		liga.quitar("Atlantic");
+		conferenciaEste.quitar("Atlantic");
 		
 		
 		
@@ -146,44 +146,44 @@ public static void main(String[] args) {
 		
 		// Crea la conferencia Oeste completa y añadela a la liga; muestra por pantalla la liga completa
 		
-		System.out.println("\n *** Liga NBA completa con sus conferencias, divisiones y equipos *** \n");
-		
-		Item conferenciaOeste = new CompuestoItem("Oeste");
-		conferenciaOeste.setCompuesto(true);
-		String[] equiposNorthEast = { "Norte1", "Norte2", "Norte3", "Norte4", "Norte5" };
-		ArrayList<Item> equiposNorthEadt = new ArrayList<Item>();
-		for (String equipo : equiposNorthEast) {
-			Item Item = new SimpleItem(equipo);
-			equiposNorthEadt.add(Item);
-		}
-		Item northEast = new CompuestoItem("NorthEast");
-		northEast.setCompuesto(true);
-		northEast.composite(equiposNorthEadt);
-
-		String[] equiposSurEast = { "Sur1", "Sur2", "Sur3", "Sur4", "Sur5" };
-		ArrayList<Item> equiposSurEadt = new ArrayList<Item>();
-		for (String equipo : equiposSurEast) {
-			Item Item = new SimpleItem(equipo);
-			equiposSurEadt.add(Item);
-		}
-		Item surEast = new CompuestoItem("SurthEast");
-		surEast.setCompuesto(true);
-		surEast.composite(equiposSurEadt);
-
-		ArrayList<Item> divisiones1 = new ArrayList<Item>();
-
-		divisiones1.add(surEast);
-		divisiones1.add(northEast);
-
-		System.out.println(conferenciaOeste.getNombre());
-		for (Item Item : divisiones1) {
-			conferenciaOeste.getHijos().add(Item);
-			
-
-		}
-
-		liga.anhadir(conferenciaOeste);
-		liga.iterable();
+//		System.out.println("\n *** Liga NBA completa con sus conferencias, divisiones y equipos *** \n");
+//		
+//		Item conferenciaOeste = new CompuestoItem("Oeste");
+//		conferenciaOeste.setCompuesto(true);
+//		String[] equiposNorthEast = { "Norte1", "Norte2", "Norte3", "Norte4", "Norte5" };
+//		ArrayList<Item> equiposNorthEadt = new ArrayList<Item>();
+//		for (String equipo : equiposNorthEast) {
+//			Item Item = new SimpleItem(equipo);
+//			equiposNorthEadt.add(Item);
+//		}
+//		Item northEast = new CompuestoItem("NorthEast");
+//		northEast.setCompuesto(true);
+//		northEast.composite(equiposNorthEadt);
+//
+//		String[] equiposSurEast = { "Sur1", "Sur2", "Sur3", "Sur4", "Sur5" };
+//		ArrayList<Item> equiposSurEadt = new ArrayList<Item>();
+//		for (String equipo : equiposSurEast) {
+//			Item Item = new SimpleItem(equipo);
+//			equiposSurEadt.add(Item);
+//		}
+//		Item surEast = new CompuestoItem("SurthEast");
+//		surEast.setCompuesto(true);
+//		surEast.composite(equiposSurEadt);
+//
+//		ArrayList<Item> divisiones1 = new ArrayList<Item>();
+//
+//		divisiones1.add(surEast);
+//		divisiones1.add(northEast);
+//
+//		System.out.println(conferenciaOeste.getNombre());
+//		for (Item Item : divisiones1) {
+//			conferenciaOeste.getHijos().add(Item);
+//			
+//
+//		}
+//
+//		liga.anhadir(conferenciaOeste);
+//		liga.iterable();
 
 	}
 }

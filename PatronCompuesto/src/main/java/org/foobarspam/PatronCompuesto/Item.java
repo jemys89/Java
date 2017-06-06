@@ -87,10 +87,6 @@ public class Item implements Iterable, Componible{
 		for(int i = 0; i < getHijos().size(); i++){
 			if(getHijos().get(i).getNombre() == nombre){
 				getHijos().remove(i);
-			}else if( getHijos().get(i).getHijos().get(i).getNombre() == nombre){
-				getHijos().get(i).getHijos().remove(i);
-			}else if(getHijos().get(i).getHijos().get(i).getHijos().get(i).getNombre() == nombre){
-				getHijos().get(i).getHijos().get(i).getHijos().remove(i);
 			}
 			
 		}
